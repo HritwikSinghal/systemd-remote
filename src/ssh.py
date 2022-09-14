@@ -4,7 +4,6 @@ import paramiko
 
 
 def get_ssh_data() -> list:
-    global out
     ssh = paramiko.SSHClient()
     k = paramiko.RSAKey.from_private_key_file("/home/xpert/.ssh/id_rsa", password=os.getenv("PASSWORD"))
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
